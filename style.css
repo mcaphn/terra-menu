@@ -1,0 +1,184 @@
+
+    body {
+      font-family: "Overpass";
+    }
+
+    .container {
+      margin: 0 auto;
+      color: #000000;
+      line-height: 1.3em;
+    }
+
+    .category-title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 2.5em;
+      color: #D69A13;
+      padding-top: 20%;
+      padding-bottom: 8%;
+    }
+
+    .name {
+      text-transform: uppercase;
+      font-weight: 400;
+      padding-bottom: .5em;
+    }
+
+    .category {
+      margin: 0 4%;
+    }
+
+    .breakfast .description,
+    .salad .description,
+    .acai .description {
+      padding-right: 15%;
+    }
+
+    .avocado .description,
+    .sandwich .description {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .avocado,
+    .sandwich {
+      text-align: center;
+
+    }
+
+    .avocado .price,
+    .sandwich .price {
+      padding-top: 50%:
+    }
+
+    .item {
+      margin-bottom: 2em;
+    }
+
+    .avocado .price,
+    .sandwich .price {
+      padding-top: 1em;
+    }
+
+    .coffee .item {
+      margin-bottom: 0;
+    }
+
+    .number {
+      font-size: 3.5em;
+      padding-right: 20px;
+      font-family: "Yellowtail";
+      color: #998870;
+    }
+
+    .photo {
+      border: 5px solid white;
+      box-shadow: 0px 0px 10px #888888;
+      width: 80%;
+    }
+
+    .photo-container {
+      text-align: center;
+    }
+
+
+    /*--------------------
+          Flexboxes
+    --------------------*/
+
+    .apart,
+    .acai .item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .acai .item {
+      align-items: center;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    /*---------------------
+    -----------------------
+          Full Screen
+    -----------------------
+    ---------------------*/
+
+    @media only screen and (min-width : 900px) {
+
+
+      .container {
+        border: none;
+        padding-bottom: 100px;
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 55% auto;
+        grid-template-rows: repeat(11, 210px);
+        grid-column-gap: 5%;
+
+      }
+
+      .breakfast {
+        grid-row: 1 / span 2;
+      }
+
+      .avocado {
+        grid-row: 5 / span 2;
+      }
+
+      .sandwich {
+        grid-row: 8 / span 2;
+        padding-top: 50px;
+      }
+
+      .salad {
+        grid-column: 2;
+        grid-row: 10 / span 2;
+      }
+
+      .coffee {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+      }
+
+      .acai {
+        grid-column: 2;
+        grid-row: 4 / span 2;
+      }
+
+      .smoothie {
+        padding-top: 20%;
+        grid-row: 6 / span 2;
+      }
+
+
+      .category {
+        margin: 0%;
+      }
+
+      .photo {
+        display: none;
+      }
+
+      /*--------------------
+            Flexboxes
+      --------------------*/
+
+      .container-center {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .container-center .item {
+        margin: 3%;
+        flex-basis: 44%;
+      }
+
+    }
