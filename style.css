@@ -14,14 +14,17 @@
       font-weight: 700;
       font-size: 2.5em;
       color: #D69A13;
-      padding-top: 20%;
-      padding-bottom: 8%;
+      /* padding-top: 20%; */
+      padding: 8% 0;
+
     }
 
     .item-name {
-      text-transform: uppercase;
-      font-weight: 400;
-      padding-bottom: .5em;
+      font-weight: 700;
+    }
+
+    .price {
+      font-weight: 700;
     }
 
     .category {
@@ -34,51 +37,40 @@
       padding-right: 15%;
     }
 
-    .avocado .description,
-    .sandwich .description {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    .avocado,
-    .sandwich {
-      text-align: center;
-
-    }
-
-    .avocado .price,
-    .sandwich .price {
-      padding-top: 50%:
-    }
-
     .item {
       margin-bottom: 2em;
     }
 
-    .avocado .price,
-    .sandwich .price {
-      padding-top: 1em;
-    }
-
     .coffee .item {
-      margin-bottom: 0;
+      margin-bottom: 0em;
     }
 
     .number {
       font-size: 3.5em;
       padding-right: 20px;
-      font-family: "Yellowtail";
       color: #998870;
     }
 
-    .photo {
-      border: 5px solid white;
-      box-shadow: 0px 0px 10px #888888;
-      width: 80%;
+    /*--------------------
+          Image Styles
+    --------------------*/
+
+    .spotlight { /* Spotlight item box styles */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      padding: .5em;
+      border: 2px solid #C33B3B;
+     margin-bottom: 2em;
     }
 
-    .photo-container {
-      text-align: center;
+    .sm-photo {
+      margin-right: 2%;
+    }
+
+    .lg-photo { /* photos in full screen */
+      display: none;
     }
 
 
@@ -97,11 +89,12 @@
       align-items: center;
     }
 
-    .row {
+    .row { /* arange category and captions side by side */
       display: flex;
       flex-direction: row;
       align-items: baseline;
     }
+
 
     /*---------------------
     -----------------------
@@ -119,8 +112,7 @@
         display: grid;
         grid-template-columns: 55% auto;
         grid-template-rows: repeat(11, 210px);
-        grid-column-gap: 5%;
-
+        grid-column-gap: 8%;
       }
 
       .breakfast {
@@ -128,22 +120,23 @@
       }
 
       .avocado {
-        grid-row: 5 / span 2;
+        grid-row: 4 / span 2;
+        padding-top: 15%;
       }
 
       .sandwich {
-        grid-row: 8 / span 2;
-        padding-top: 50px;
+        grid-row: 7 / span 2;
       }
 
       .salad {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 10 / span 2;
+        padding-top: 15%;
       }
 
       .coffee {
         grid-column: 2;
-        grid-row: 2 / span 2;
+        grid-row: 1 / span 2;
       }
 
       .acai {
@@ -152,8 +145,14 @@
       }
 
       .smoothie {
-        padding-top: 20%;
+        grid-column: 2;
         grid-row: 6 / span 2;
+      }
+
+      .pastries {
+        grid-column: 2;
+        grid-row: 9;
+        padding-top: 15%;
       }
 
 
@@ -161,9 +160,35 @@
         margin: 0%;
       }
 
-      .photo {
+      .spotlight {
+        border: none;
+        padding: 0;
+      }
+
+      .sm-photo {
         display: none;
       }
+
+      .photo-container {
+        height: 150px;
+        margin: 20px;
+        background-size: 100%;
+        background-repeat: none;
+        background-position: center;
+      }
+
+      .toast-img {
+        background-image: url(img/alvocano.jpg);
+      }
+
+      .sandwich-img {
+        background-image: url(img/HF.png);
+      }
+
+      .acai-img {
+        background-image: url(img/acai.jpg);
+      }
+
 
       /*--------------------
             Flexboxes
@@ -173,11 +198,11 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        /* justify-content: center; */
       }
 
       .container-center .item {
-        margin: 3%;
+        margin: 0 6% 6% 0;
         flex-basis: 44%;
       }
 
