@@ -7,6 +7,7 @@ body {
   margin: 0 auto;
   color: #000000;
   line-height: 1.3em;
+  max-width: 528px;
 }
 
 .category-title {
@@ -108,12 +109,6 @@ body {
 -----------------------
 ---------------------*/
 
-@media (min-width : 528px) {
-
-   .container {
-     max-width: 528px;
-   }
-}
 
 @media only screen and (min-width : 900px) {
 
@@ -124,7 +119,7 @@ body {
     max-width: 1000px;
     display: grid;
     grid-template-columns: 42% auto;
-    grid-template-rows: repeat(13, 210px);
+    grid-template-rows: repeat(13, 200px);
     grid-column-gap: 16%;
   }
 
@@ -214,11 +209,11 @@ body {
   }
 
   .sandwich-img {
-    background-image: url(img/HF.png);
+    background-image: url(img/HF.jpg);
   }
 
   .acai-img {
-    background-image: url(img/acaipng.png);
+    background-image: url(img/acai.jpg);
   }
 
   .salad-img {
@@ -226,27 +221,12 @@ body {
   }
 
   .smoothie-img {
-    background-image: url(img/smoothie.png);
+    background-image: url(img/smoothie.jpg);
   }
 
   .pastries-img {
-    background-image: url(img/pastries.png);
+    background-image: url(img/pastries.jpg);
+    margin: 20px 0;
   }
-
-
-  /*--------------------
-        Flexboxes
-  --------------------*/
-
-  /* .container-center {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  } */
-
-  /* .container-center .item {
-    margin: 0 6% 6% 0;
-    flex-basis: 44%;
-  } */
 
 }
