@@ -68,18 +68,13 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: .5em;
-  border: 2px solid #C33B3B;
+  border: 2px solid #e76f51;
   margin-bottom: 2em;
 }
 
 .sm-photo {
   margin-right: 2%;
 }
-
-.lg-photo { /* photos in full screen */
-  display: none;
-}
-
 
 /*--------------------
       Flexboxes
